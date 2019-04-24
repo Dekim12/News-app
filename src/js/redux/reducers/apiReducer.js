@@ -1,9 +1,22 @@
-import {} from '../../constants';
+import {
+  API_CALL_REQUEST,
+  API_CALL_SUCCESS,
+  API_CALL_FAILURE,
+} from '../../constants';
 
-const initialState = {};
+const initialState = {
+  loading: false,
+  error: null,
+};
 
 const apiState = (state = initialState, action) => {
   switch (action.type) {
+    case API_CALL_REQUEST:
+      return { ...state, loading: true, error: null };
+    case API_CALL_FAILURE:
+      return { ...state, loading: false, error: action.payload };
+    case API_CALL_SUCCESS:
+      return { ...state, loading: false };
     default:
       return state;
   }

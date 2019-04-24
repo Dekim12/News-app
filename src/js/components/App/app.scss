@@ -1,6 +1,13 @@
 @import '../../../style/vars';
 
 .app {
+  width: 100%;
   min-height: 100vh;
   background-color: $primary-bg;
+}
+
+.app-headline {
+  font-size: 55px;
+  color: $headline-color;
+  font-family: 'Luckiest Guy';
 }
