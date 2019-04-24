@@ -1,7 +1,8 @@
-import { SET_PRIMARY_DATA } from '../../constants';
+import { SET_PRIMARY_DATA, MIN_QUANTITY_NEWS } from '../../constants';
 
 const initialState = {
   primaryData: null,
+  quantityDisplayedNews: MIN_QUANTITY_NEWS,
 };
 
 const dataState = (state = initialState, action) => {

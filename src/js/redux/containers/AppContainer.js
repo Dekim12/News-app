@@ -6,7 +6,6 @@ import { callRequest } from '../actions/apiActions';
 const mapStateToProps = state => ({
   loading: state.apiState.loading,
   error: state.apiState.error,
-  primaryData: state.dataState.primaryData,
 });
 
 const mapDispatchToProps = dispatch =>

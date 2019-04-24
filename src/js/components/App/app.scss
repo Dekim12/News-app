@@ -4,10 +4,12 @@
   width: 100%;
   min-height: 100vh;
   background-color: $primary-bg;
+  z-index: 10;
 }
 
 .app-headline {
-  font-size: 55px;
+  font-size: 60px;
   color: $headline-color;
   font-family: 'Luckiest Guy';
+  margin-bottom: 60px;
 }

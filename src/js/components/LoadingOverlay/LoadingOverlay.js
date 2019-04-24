@@ -1,8 +1,7 @@
 import React from 'react';
-import uuid from 'uuid/v1';
 import './loadingOverlay.scss';
 
-const LoadingOverlay = props => {
+const LoadingOverlay = () => {
   return (
     <section className='loading-overlay'>
       <div className='spinner'>
