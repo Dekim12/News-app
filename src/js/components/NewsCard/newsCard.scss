@@ -4,21 +4,20 @@
   display: block;
   width: 70%;
   min-width: 280px;
-  height: 300px;
+  min-height: 300px;
   user-select: none;
-}
-
-.news-card-wrapper:not(:last-child) {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .news-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 20px 30px;
+  min-height: 300px;
+  padding: 20px 30px 45px;
   border-radius: 20px 0 20px 0;
   background-color: rgb(245, 238, 247);
   box-shadow: rgb(189, 122, 219) 0 0 150px;
@@ -27,15 +26,22 @@
 .news-card-name {
   font-size: 35px;
   font-family: 'Bowlby One SC';
+  margin-bottom: 20px;
+  color: rgb(170, 96, 5);
 }
 
 .news-card-description {
   font-family: 'Frank Ruhl Libre';
   font-size: 25px;
   text-align: center;
+  line-height: 1.3;
 }
 
 .news-languages {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+  color: rgb(247, 148, 31);
   font-family: 'Knewave';
   font-size: 20px;
 }
@@ -43,6 +49,7 @@
 .language {
   display: inline-block;
   margin-left: 10px;
+  color: rgb(58, 58, 58);
   font-size: 25px;
   font-family: 'Frank Ruhl Libre';
   text-transform: uppercase;

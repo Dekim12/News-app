@@ -1,7 +1,7 @@
 import React from 'react';
 import './newsCard.scss';
 
-const NewsCard = ({ id, name, description, url, language }) => {
+const NewsCard = ({ name, description, url, language }) => {
   return (
     <a
       href={url}
