@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NewsListContainer } from '../../redux/containers';
-import { LoadingOverlay } from '../index';
+import { LoadingOverlay, FilterList } from '../index';
 
 import './app.scss';
 
@@ -14,10 +14,9 @@ class App extends Component {
 
     return (
       <div className='app'>
-        <div className='content'>
-          <h1 className='app-headline'>PewNews</h1>
-          <NewsListContainer />
-        </div>
+        <h1 className='app-headline'>PewNews</h1>
+        <FilterList />
+        <NewsListContainer />
         {loading ? <LoadingOverlay /> : null}
       </div>
     );
