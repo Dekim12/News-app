@@ -3,7 +3,7 @@
 .load-more-btn {
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #8b8b8b;
+  border: 1px solid rgb(139, 139, 139);
   border-radius: 5px;
   box-shadow: rgba(222, 124, 247, 0.8) 0 0 10px;
   background-color: $btn-load-more-bg;
@@ -24,7 +24,7 @@
 
 .button-for-search {
   padding: 11px 20px;
-  border: 1px solid #8b8b8b;
+  border: 1px solid rgb(139, 139, 139);
   border-left: none;
   border-radius: 0 5px 5px 0;
   background-color: $btn-load-more-bg;
@@ -51,7 +51,7 @@
   bottom: 15px;
   width: 40px;
   height: 40px;
-  border: 1px solid #8b8b8b;
+  border: 1px solid rgb(139, 139, 139);
   box-shadow: rgba(255, 255, 255, 0.6) 0 0 10px;
   border-radius: 50%;
   background-color: $btn-load-more-bg;
