@@ -13,7 +13,7 @@
   position: relative;
   width: 100%;
   margin-bottom: 40px;
-  padding: 40px 20px;
+  padding: 5px 20px 10px;
   box-shadow: rgb(241, 236, 191) 0 0 25px;
   z-index: 30;
 
@@ -29,6 +29,7 @@
 }
 
 .filter-list .content {
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 25px 30px;

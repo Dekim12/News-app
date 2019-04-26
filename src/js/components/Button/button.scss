@@ -42,3 +42,45 @@
     background-color: $btn-load-more-bg_a;
   }
 }
+
+.switcher {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 15px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8b8b8b;
+  box-shadow: rgba(255, 255, 255, 0.6) 0 0 10px;
+  border-radius: 50%;
+  background-color: $btn-load-more-bg;
+  color: $btn-load-more-c;
+  outline: none;
+  font-size: 22px;
+  transition: 0.1s background-color ease-in-out;
+
+  &:hover {
+    background-color: $btn-load-more-bg_h;
+  }
+
+  &:active {
+    background-color: $btn-load-more-bg_a;
+  }
+}
+
+.btn-previous {
+  left: 15px;
+}
+
+.btn-next {
+  right: 15px;
+}
+
+.btn-previous .fa {
+  margin-right: 3px;
+}
+
+.btn-next .fa {
+  margin-left: 4px;
+}

@@ -6,13 +6,18 @@ import {
 
 const initialState = {
   primaryData: null,
+  sourcesList: null,
   quantityDisplayedNews: MIN_QUANTITY_NEWS,
 };
 
 const dataState = (state = initialState, action) => {
   switch (action.type) {
     case SET_PRIMARY_DATA:
-      return { ...state, primaryData: action.payload };
+      return {
+        ...state,
+        primaryData: action.payload.data,
+        sourcesList: action.payload.sources,
+      };
     case LOAD_MORE_NEWS:
       return {
         ...state,

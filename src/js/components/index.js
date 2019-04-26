@@ -6,3 +6,4 @@ export { default as Button } from './Button/Button';
 export { default as FilterList } from './FilterList/FilterList';
 export { default as Filter } from './Filter/Filter';
 export { default as Search } from './Search/Search';
+export { default as SourceItem } from './SourceItem/SourceItem';

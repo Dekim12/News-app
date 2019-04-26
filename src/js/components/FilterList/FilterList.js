@@ -1,12 +1,13 @@
 import React from 'react';
-import { Filter, Search } from '../index';
+import { Search } from '../index';
+import { FilterContainer } from '../../redux/containers';
 import './filterList.scss';
 
 const FilterList = () => {
   return (
     <article className='filter-list'>
       <div className='content'>
-        <Filter />
+        <FilterContainer />
         <Search />
       </div>
     </article>

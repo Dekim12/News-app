@@ -11,8 +11,10 @@ function* workerSaga() {
   try {
     const response = yield call(fetchData);
     const { data } = response;
+    const sourcesResponse = yield call(fetchSources);
+    const sourcesData = sourcesResponse.data;
 
-    yield put(setPrimaryData(data.articles));
+    yield put(setPrimaryData(data.articles, sourcesData.sources));
     yield put(requestPassedSuccessfully());
   } catch (error) {
     yield put(requestFailed(error));
