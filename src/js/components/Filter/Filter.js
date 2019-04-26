@@ -9,10 +9,11 @@ const Filter = ({
   listNumber,
   previousFilterList,
   nextFilterList,
+  searchSource,
 }) => {
   const generateSources = sources =>
     selectSources(sources, listNumber).map(source => (
-      <SourceItem id={source.id} key={uuid()}>
+      <SourceItem id={source.id} key={uuid()} findSource={searchSource}>
         {source.name}
       </SourceItem>
     ));

@@ -2,6 +2,7 @@ import {
   SET_PRIMARY_DATA,
   MIN_QUANTITY_NEWS,
   LOAD_MORE_NEWS,
+  SET_DATA,
 } from '../../constants';
 
 const initialState = {
@@ -22,6 +23,11 @@ const dataState = (state = initialState, action) => {
       return {
         ...state,
         quantityDisplayedNews: state.quantityDisplayedNews + MIN_QUANTITY_NEWS,
+      };
+    case SET_DATA:
+      return {
+        ...state,
+        primaryData: action.payload,
       };
     default:
       return state;

@@ -4,8 +4,10 @@ export const API_CALL_FAILURE = 'API_CALL_FAILURE';
 
 export const SET_PRIMARY_DATA = 'SET_PRIMARY_DATA';
 export const LOAD_MORE_NEWS = 'LOAD_MORE_NEWS';
+export const SET_DATA = 'SET_DATA';
 
-export const TOGGLE_FILTER = 'TOGGLE_FILTER';
+export const SEARCH_REQUEST = 'SEARCH_REQUEST';
+export const SEARCH_SOURCE = 'SEARCH_SOURCE';
 
 export const NEXT_LIST = 'NEXT_LIST';
 export const PREVIOUS_LIST = 'PREVIOUS_LIST';

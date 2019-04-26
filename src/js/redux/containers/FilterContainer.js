@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Filter } from '../../components';
-import { nextFilterList, previousFilterList } from '../actions';
+import { nextFilterList, previousFilterList, searchSource } from '../actions';
 
 const mapStateToProps = state => ({
   sourcesList: state.dataState.sourcesList,
@@ -13,6 +13,7 @@ const mapDispatchToProps = dispatch =>
     {
       nextFilterList,
       previousFilterList,
+      searchSource,
     },
     dispatch
   );

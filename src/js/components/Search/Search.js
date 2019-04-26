@@ -3,18 +3,20 @@ import { Button } from '../index';
 import './search.scss';
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
-
-    this.searchQuery = '';
-  }
+  searchQuery = '';
 
   addSearchQuery = event => {
     const currentValue = event.target.value;
     this.searchQuery = currentValue.replace(/^\s+|\s+$/g, '');
   };
 
-  sendRequest = () => {};
+  sendRequest = event => {
+    event.preventDefault();
+    const { searchRequest } = this.props;
+    if (this.searchQuery) {
+      searchRequest(this.searchQuery);
+    }
+  };
 
   render() {
     return (

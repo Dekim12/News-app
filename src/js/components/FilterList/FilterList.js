@@ -1,6 +1,5 @@
 import React from 'react';
-import { Search } from '../index';
-import { FilterContainer } from '../../redux/containers';
+import { FilterContainer, SearchContainer } from '../../redux/containers';
 import './filterList.scss';
 
 const FilterList = () => {
@@ -8,7 +7,7 @@ const FilterList = () => {
     <article className='filter-list'>
       <div className='content'>
         <FilterContainer />
-        <Search />
+        <SearchContainer />
       </div>
     </article>
   );

@@ -8,8 +8,6 @@ const NewsList = ({ primaryData, quantityNews, loadMoreNews }) => {
   const generateNewsCard = (data, quantity) =>
     data.slice(0, quantity).map(news => <NewsCard data={news} key={uuid()} />);
 
-  console.log(primaryData);
-
   if (!primaryData || !primaryData.length) {
     return (
       <section className='news-list'>
