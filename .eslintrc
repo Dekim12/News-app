@@ -44,5 +44,8 @@
       "version": "16.2.0"
     }
   },
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true
+  }
 }
