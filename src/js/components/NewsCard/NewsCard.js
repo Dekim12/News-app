@@ -19,9 +19,7 @@ const NewsCard = ({ data }) => {
         <div className='records-list'>
           <p className='record author'>
             Author:{' '}
-            <span className='record-content'>
-              {author ? prepareAuthorName(author) : 'unknown'}
-            </span>
+            <span className='record-content'>{prepareAuthorName(author)}</span>
           </p>
           <p className='record publication'>
             Publication:

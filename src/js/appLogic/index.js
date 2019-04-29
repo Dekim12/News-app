@@ -4,6 +4,10 @@ export const isMoreDataExist = (dataCount, quantity) =>
   dataCount > quantity && quantity < MAX_QUANTITY_NEWS;
 
 export const prepareAuthorName = name => {
+  if (typeof name !== 'string') {
+    return 'unknown';
+  }
+
   const wordsCount = 3;
   const preparedName = name.split(' ');
 
@@ -16,15 +20,19 @@ export const prepareAuthorName = name => {
   return preparedName.slice(0, wordsCount).join(' ');
 };
 
-export const selectSources = (list, number) => {
+export const selectSources = (list = [], number) => {
   const startValue = number * MAX_COUNT_ITEMS;
+
+  if (!Array.isArray(list)) {
+    return [];
+  }
   return list.slice(startValue, startValue + MAX_COUNT_ITEMS);
 };
 
-export const isNotLastList = (list, number) => {
+export const isNotLastList = (list = [], number) => {
   const maxCount = number * MAX_COUNT_ITEMS + MAX_COUNT_ITEMS;
-  if (maxCount >= list.length) {
-    return null;
+  if (maxCount < list.length) {
+    return true;
   }
-  return true;
+  return null;
 };

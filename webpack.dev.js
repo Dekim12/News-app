@@ -7,7 +7,4 @@ module.exports = merge(common, {
   devServer: {
     contentBase: './dist',
   },
-  // module: {
-  //   rules: [{ enforce: 'pre', test: /\.js?x$/, loader: 'eslint-loader' }],
-  // },
 });
