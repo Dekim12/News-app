@@ -1,9 +1,25 @@
 import React from 'react';
-import { prepareAuthorName } from '../../appLogic';
 import './newsCard.scss';
 
 const NewsCard = ({ data }) => {
   const { url, author, publishedAt, title, urlToImage, description } = data;
+
+  const prepareAuthorName = name => {
+    if (name === '' || typeof name !== 'string') {
+      return 'unknown';
+    }
+
+    const wordsCount = 3;
+    const preparedName = name.split(' ');
+
+    if (preparedName.length > wordsCount) {
+      return preparedName
+        .slice(0, wordsCount)
+        .join(' ')
+        .concat('...');
+    }
+    return preparedName.slice(0, wordsCount).join(' ');
+  };
 
   return (
     <a
@@ -18,7 +34,7 @@ const NewsCard = ({ data }) => {
         <p className='news-card-description'>{description}</p>
         <div className='records-list'>
           <p className='record author'>
-            Author:{' '}
+            Author:
             <span className='record-content'>{prepareAuthorName(author)}</span>
           </p>
           <p className='record publication'>

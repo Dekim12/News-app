@@ -1,7 +1,6 @@
 import React from 'react';
 import uuid from 'uuid/v1';
 import { SourceItem, Button } from '../index';
-import { selectSources, isNotLastList } from '../../appLogic';
 import './filter.scss';
 
 const Filter = ({
@@ -10,23 +9,25 @@ const Filter = ({
   previousFilterList,
   nextFilterList,
   searchSource,
+  sourcesExist,
+  lastList,
 }) => {
+  if (!sourcesExist) {
+    return null;
+  }
+
   const generateSources = sources =>
-    selectSources(sources, listNumber).map(source => (
+    sources.map(source => (
       <SourceItem id={source.id} key={uuid()} findSource={searchSource}>
         {source.name}
       </SourceItem>
     ));
 
-  if (!sourcesList || !sourcesList.length) {
-    return null;
-  }
-
   return (
     <article className='select-wrapper'>
       <h3 className='sources-headline'>Sources List</h3>
-      <ul className='select'>{sourcesList && generateSources(sourcesList)}</ul>
-      {isNotLastList(sourcesList, listNumber) && (
+      <ul className='select'>{generateSources(sourcesList)}</ul>
+      {lastList && (
         <Button className='switcher btn-next ' makeChanges={nextFilterList}>
           <i className='fa fa-chevron-right' aria-hidden='true' />
         </Button>

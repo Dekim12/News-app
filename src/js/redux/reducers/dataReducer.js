@@ -15,9 +15,9 @@ const dataState = (state = initialState, action) => {
   switch (action.type) {
     case SET_PRIMARY_DATA:
       return {
-        ...state,
         primaryData: action.payload.data,
         sourcesList: action.payload.sources,
+        quantityDisplayedNews: MIN_QUANTITY_NEWS,
       };
     case LOAD_MORE_NEWS:
       return {
@@ -28,6 +28,7 @@ const dataState = (state = initialState, action) => {
       return {
         ...state,
         primaryData: action.payload,
+        quantityDisplayedNews: MIN_QUANTITY_NEWS,
       };
     default:
       return state;

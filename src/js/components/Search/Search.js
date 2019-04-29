@@ -12,9 +12,11 @@ class Search extends Component {
 
   sendRequest = event => {
     event.preventDefault();
-    const { searchRequest } = this.props;
+    const { searchRequest, callRequest } = this.props;
     if (this.searchQuery) {
       searchRequest(this.searchQuery);
+    } else {
+      callRequest();
     }
   };
 

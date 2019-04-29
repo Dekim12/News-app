@@ -1,14 +1,19 @@
 import React from 'react';
 import uuid from 'uuid/v1';
 import { NewsCard, Button } from '../index';
-import { isMoreDataExist } from '../../appLogic';
 import './newsList.scss';
 
-const NewsList = ({ primaryData, quantityNews, loadMoreNews }) => {
+const NewsList = ({
+  primaryData,
+  quantityNews,
+  loadMoreNews,
+  newsExist,
+  showLoadMoreButton,
+}) => {
   const generateNewsCard = (data, quantity) =>
     data.slice(0, quantity).map(news => <NewsCard data={news} key={uuid()} />);
 
-  if (!primaryData || !primaryData.length) {
+  if (!newsExist) {
     return (
       <section className='news-list'>
         <p className='exist-message'>News don`t exist...</p>
@@ -18,8 +23,8 @@ const NewsList = ({ primaryData, quantityNews, loadMoreNews }) => {
 
   return (
     <section className='news-list content'>
-      {primaryData && generateNewsCard(primaryData, quantityNews)}
-      {isMoreDataExist(primaryData.length, quantityNews) && (
+      {generateNewsCard(primaryData, quantityNews)}
+      {showLoadMoreButton && (
         <Button className='load-more-btn' makeChanges={loadMoreNews}>
           load more
         </Button>

@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Search } from '../../components';
-import { searchRequest } from '../actions';
+import { searchRequest, callRequest } from '../actions';
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       searchRequest,
+      callRequest,
     },
     dispatch
   );

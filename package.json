@@ -69,11 +69,6 @@
     "type": "git",
     "url": "git+https://github.com/Dekim12/News-app.git"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -14,13 +14,13 @@ const initialState = {
 const apiState = (state = initialState, action) => {
   switch (action.type) {
     case API_CALL_REQUEST:
-      return { ...state, loading: true, error: null };
+      return { loading: true, error: null };
     case SEARCH_SOURCE:
-      return { ...state, loading: true, error: null };
+      return { loading: true, error: null };
     case SEARCH_REQUEST:
-      return { ...state, loading: true, error: null };
+      return { loading: true, error: null };
     case API_CALL_FAILURE:
-      return { ...state, loading: false, error: action.payload };
+      return { loading: false, error: action.payload };
     case API_CALL_SUCCESS:
       return { ...state, loading: false };
     default:
