@@ -1,0 +1,36 @@
+@import '../../../style/vars';
+
+%filter-list-pseudo-elements {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: $news-card-news-record-c;
+}
+
+.filter-list {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 5px 20px 10px;
+  box-shadow: rgb(241, 236, 191) 0 0 25px;
+  z-index: 30;
+
+  &::before {
+    @extend %filter-list-pseudo-elements;
+    top: 0;
+  }
+
+  &::after {
+    @extend %filter-list-pseudo-elements;
+    bottom: 0;
+  }
+}
+
+.filter-list .content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+}

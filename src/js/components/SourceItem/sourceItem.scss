@@ -1,0 +1,27 @@
+@import '../../../style/vars';
+
+.source-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 127px;
+  height: 60px;
+  margin-right: 35px;
+  background-color: $source-item-bg;
+  box-shadow: rgba(222, 124, 247, 0.8) 0 0 20px;
+  border-radius: 5px;
+  z-index: 20;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Neucha';
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+
+  &:hover {
+    background-color: $btn-load-more-bg;
+  }
+}
+
+.source-item:last-child {
+  margin-right: 0px;
+}

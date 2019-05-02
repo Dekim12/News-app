@@ -1,0 +1,86 @@
+@import '../../../style/vars';
+
+.load-more-btn {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgb(139, 139, 139);
+  border-radius: 5px;
+  box-shadow: rgba(222, 124, 247, 0.8) 0 0 10px;
+  background-color: $btn-load-more-bg;
+  color: $btn-load-more-c;
+  outline: none;
+  font-size: 35px;
+  font-family: 'Luckiest Guy';
+  transition: 0.1s background-color ease-in-out;
+
+  &:hover {
+    background-color: $btn-load-more-bg_h;
+  }
+
+  &:active {
+    background-color: $btn-load-more-bg_a;
+  }
+}
+
+.button-for-search {
+  padding: 11px 20px;
+  border: 1px solid rgb(139, 139, 139);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: $btn-load-more-bg;
+  color: $btn-load-more-c;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Luckiest Guy';
+  transition: 0.1s background-color ease-in-out;
+
+  &:hover {
+    background-color: $btn-load-more-bg_h;
+  }
+
+  &:active {
+    background-color: $btn-load-more-bg_a;
+  }
+}
+
+.switcher {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 15px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(139, 139, 139);
+  box-shadow: rgba(255, 255, 255, 0.6) 0 0 10px;
+  border-radius: 50%;
+  background-color: $btn-load-more-bg;
+  color: $btn-load-more-c;
+  outline: none;
+  font-size: 22px;
+  transition: 0.1s background-color ease-in-out;
+
+  &:hover {
+    background-color: $btn-load-more-bg_h;
+  }
+
+  &:active {
+    background-color: $btn-load-more-bg_a;
+  }
+}
+
+.btn-previous {
+  left: 15px;
+}
+
+.btn-next {
+  right: 15px;
+}
+
+.btn-previous .fa {
+  margin-right: 3px;
+}
+
+.btn-next .fa {
+  margin-left: 4px;
+}
