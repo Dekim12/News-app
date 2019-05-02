@@ -17,7 +17,7 @@ import {
   SEARCH_REQUEST,
 } from '../../constants';
 
-function* initialRequestsSaga() {
+export function* initialRequestsSaga() {
   try {
     const response = yield call(fetchAllData);
     const { data } = response;
@@ -31,7 +31,7 @@ function* initialRequestsSaga() {
   }
 }
 
-function* sourceRequestsSaga(action) {
+export function* sourceRequestsSaga(action) {
   try {
     const response = yield call(fetchBySource, action.payload);
     const data = response.data.articles;
@@ -43,7 +43,7 @@ function* sourceRequestsSaga(action) {
   }
 }
 
-function* searchRequestsSaga(action) {
+export function* searchRequestsSaga(action) {
   try {
     const response = yield call(fetchByQuery, action.payload);
     const data = response.data.articles;
